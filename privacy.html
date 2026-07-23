@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — AI Context-Aware Subtitle Translator</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #202124; }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; }
+  code { background: #f1f3f4; padding: 0.1rem 0.35rem; border-radius: 3px; }
+  a { color: #1a73e8; }
+  .updated { color: #5f6368; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<h1>Privacy Policy — AI Context-Aware Subtitle Translator</h1>
+<p class="updated">Last updated: 2026-07-23</p>
+
+<p>This extension does not operate a server, and the developer does not
+collect, receive, or store any of your data. Everything the extension does
+happens either locally in your browser or as a direct connection from your
+browser to a third-party AI service <strong>you choose and configure</strong>.</p>
+
+<h2>What gets sent, and to whom</h2>
+
+<h3>1. The AI translation service you configure</h3>
+<p>To generate a translation, the extension sends:</p>
+<ul>
+  <li>the video's title and episode information,</li>
+  <li>the official subtitle text currently loaded by the video player, and</li>
+  <li>translation context built from that subtitle text (character names,
+    relationships, honorific/address forms, and glossary terms)</li>
+</ul>
+<p>directly from your browser to whichever AI service you have configured in
+Settings:</p>
+<ul>
+  <li>an API key you provide (OpenAI, Anthropic, Google, or any
+    OpenAI-compatible server you specify),</li>
+  <li>a Codex/Claude/Gemini subscription, connected through a small local
+    helper program that runs on your own computer, or</li>
+  <li>a local model you run yourself (e.g. LM Studio, Ollama) on your own
+    machine or network.</li>
+</ul>
+<p>In every case, this data goes straight from your browser (or your local
+helper program) to that service's own servers under that service's own
+privacy policy and terms. It never passes through, or is retained by, any
+server operated by this extension's developer — because there isn't one.</p>
+
+<h3>2. Public reference lookups for optional show context</h3>
+<p>When the extension recognizes a title, it may look up the <strong>title
+only</strong> (never your subtitle or dialogue text) on public reference
+sources — Wikidata, Wikipedia, and TVMaze — to enrich translation context
+with publicly available cast/character information. These are read-only,
+public lookups; no subtitle content is ever sent to them.</p>
+
+<h2>What never leaves your browser</h2>
+<ul>
+  <li>Your settings (chosen AI service, target language, display preferences).</li>
+  <li>Generated and cached subtitle translations.</li>
+  <li>The reusable per-title translation context ("Series DB": character
+    voice, relationships, glossary) built from your own viewing.</li>
+  <li>Any subtitle file you manually import from your own computer.</li>
+</ul>
+<p>All of the above are stored locally in your browser's extension storage.
+The developer has no access to them, and they are never transmitted anywhere
+except as described in "What gets sent, and to whom" above.</p>
+
+<h2>What we don't do</h2>
+<ul>
+  <li>We don't run a backend server.</li>
+  <li>We don't collect analytics, usage tracking, or advertising identifiers.</li>
+  <li>We don't sell or share your data with anyone, because we never receive it.</li>
+</ul>
+
+<h2>Your controls</h2>
+<ul>
+  <li>You choose which AI service to use, and can switch or remove it at any
+    time in Settings.</li>
+  <li>You can delete all cached/generated subtitles from Settings at any time.</li>
+  <li>Uninstalling the extension removes all locally stored data.</li>
+</ul>
+
+<h2>Contact</h2>
+<p>Questions about this policy: open an issue at
+<a href="https://github.com/zephyranthes03/ai-context-aware-subtitle-translator/issues">github.com/zephyranthes03/ai-context-aware-subtitle-translator/issues</a>.</p>
+</body>
+</html>
