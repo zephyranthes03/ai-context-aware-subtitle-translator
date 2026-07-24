@@ -1,0 +1,57 @@
+name: Bug report
+description: Something isn't working the way it should
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you see, and what did you expect instead?
+      placeholder: e.g. The translated subtitle disappeared for a few seconds after resuming playback.
+    validations:
+      required: true
+  - type: input
+    id: site
+    attributes:
+      label: Streaming site / URL
+      description: Which site were you watching on? A direct video URL helps a lot if you can share it.
+      placeholder: e.g. Disney+, https://www.disneyplus.com/...
+    validations:
+      required: true
+  - type: input
+    id: languages
+    attributes:
+      label: Source -> target language
+      placeholder: e.g. English -> Korean
+    validations:
+      required: false
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you do right before this happened?
+      placeholder: |
+        1. Started playback
+        2. Paused for a minute
+        3. Pressed Continue
+    validations:
+      required: false
+  - type: textarea
+    id: console
+    attributes:
+      label: Console log (optional)
+      description: >-
+        If you can, open DevTools (F12) on the video tab, filter by
+        "subtitle-align", and paste any relevant lines here. You don't need
+        to include subtitle/dialogue text if you'd rather not share it
+        publicly -- the structural log lines are usually enough on their own.
+      render: text
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: Extension version
+      description: Found on chrome://extensions
+    validations:
+      required: false

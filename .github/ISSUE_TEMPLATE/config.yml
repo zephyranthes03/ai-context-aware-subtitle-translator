@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Privacy policy
+    url: https://zephyranthes03.github.io/ai-context-aware-subtitle-translator/privacy.html
+    about: Read this first if your question is about data handling rather than a bug or feature.

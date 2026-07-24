@@ -6,9 +6,10 @@ glossary terms) for more natural, consistent translations than a
 line-by-line machine translation.
 
 - **Privacy Policy**: https://zephyranthes03.github.io/ai-context-aware-subtitle-translator/privacy.html
-- **Issues / feature requests**: use the [Issues tab](https://github.com/zephyranthes03/ai-context-aware-subtitle-translator/issues) above
-  - Bug report? Open an issue describing what happened and which site/video.
-  - Want a site supported that isn't yet? Open an issue naming the site — 👍 existing requests instead of duplicating them, it helps prioritize.
+- **Feedback**: open a [new issue](https://github.com/zephyranthes03/ai-context-aware-subtitle-translator/issues/new/choose) and pick the template that fits:
+  - **Bug report** — something isn't working the way it should.
+  - **Site / service support request** — a streaming site or provider you'd like added. 👍 an existing request instead of duplicating it, it helps prioritize.
+  - **Feature request / feedback** — anything else.
 
 This repository hosts public documentation and issue tracking only; it does
 not contain the extension's source code.

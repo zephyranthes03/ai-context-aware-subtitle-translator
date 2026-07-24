@@ -1,0 +1,32 @@
+name: Site / service support request
+description: Ask for a streaming site or provider that isn't supported yet
+labels: ["site-request"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Before opening a new request, please check the existing open issues
+        and 👍 one instead of filing a duplicate -- it helps us prioritize
+        which sites to add next.
+  - type: input
+    id: site
+    attributes:
+      label: Site or service name
+      placeholder: e.g. Netflix, HBO Max, Crunchyroll
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Example video URL
+      description: A link to a specific video/episode on that site, if possible.
+    validations:
+      required: false
+  - type: textarea
+    id: why
+    attributes:
+      label: What's missing today?
+      description: Does the site have no subtitles at all, wrong-language subtitles, or something else?
+      placeholder: e.g. The site has English subtitles but no Korean option.
+    validations:
+      required: true
