@@ -15,12 +15,13 @@
 </head>
 <body>
 <h1>Privacy Policy — AI Context-Aware Subtitle Translator</h1>
-<p class="updated">Last updated: 2026-07-23</p>
+<p class="updated">Last updated: 2026-08-16</p>
 
 <p>This extension does not operate a server, and the developer does not
 collect, receive, or store any of your data. Everything the extension does
 happens either locally in your browser or as a direct connection from your
-browser to a third-party AI service <strong>you choose and configure</strong>.</p>
+browser to a third-party AI or translation service <strong>you choose and
+configure</strong>.</p>
 
 <h2>What gets sent, and to whom</h2>
 
@@ -47,7 +48,24 @@ helper program) to that service's own servers under that service's own
 privacy policy and terms. It never passes through, or is retained by, any
 server operated by this extension's developer — because there isn't one.</p>
 
-<h3>2. Public reference lookups for optional show context</h3>
+<h3>2. DeepL (optional machine-translation fill layer)</h3>
+<p>If you add a DeepL API key in Settings, the extension may also send
+subtitle text directly to DeepL's API — either as your chosen translation
+engine, or as a fast fill-in layer that covers upcoming lines while the AI
+backend catches up. This goes straight from your browser to DeepL under
+DeepL's own privacy policy and terms. DeepL is only contacted if you
+configure a key; otherwise this never happens.</p>
+
+<h3>3. Audio subtitles / speech-to-text (optional, per tab)</h3>
+<p>If a video has no usable subtitle track, you can start "audio subtitles"
+for that tab. Only after you explicitly start it, short chunks of that tab's
+audio are captured and sent to the speech-to-text endpoint you've configured
+in Settings — by default OpenAI's hosted Whisper API, or any
+OpenAI-compatible endpoint you specify, including a self-hosted server. This
+never runs automatically or in the background, and only the tab you started
+it on is captured.</p>
+
+<h3>4. Public reference lookups for optional show context</h3>
 <p>When the extension recognizes a title, it may look up the <strong>title
 only</strong> (never your subtitle or dialogue text) on public reference
 sources — Wikidata, Wikipedia, and TVMaze — to enrich translation context
