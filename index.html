@@ -3,27 +3,50 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AI Context-Aware Subtitle Translator</title>
+<title>Context-Aware Translation — Chrome extensions</title>
 <style>
   body { font-family: system-ui, sans-serif; max-width: 640px; margin: 3rem auto; padding: 0 1rem; line-height: 1.6; color: #202124; }
   h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.2rem; margin-top: 2.4rem; }
   a { color: #1a73e8; }
   ul { padding-left: 1.2rem; }
+  .lead { color: #3c4043; }
+  .status { color: #5f6368; font-size: 0.92rem; }
 </style>
 </head>
 <body>
-<h1>AI Context-Aware Subtitle Translator</h1>
-<p>A Chrome extension that generates AI translations of streaming video
-subtitles, using full-scene context (character voice, relationships,
-glossary terms) for more natural, consistent translations than a
-line-by-line machine translation.</p>
-<p>Free to install and use — bring the AI you already have: a local model
-(Ollama / LM Studio), your existing ChatGPT or Claude subscription, a free
-DeepL key, or your own API key. No sign-up, no in-extension payments.</p>
+<h1>Context-Aware Translation</h1>
+<p class="lead">Two Chrome extensions that translate with the whole work in
+view, rather than a line at a time. Both are free, and both run on an AI
+connection you set up yourself — a local model (Ollama / LM Studio), a
+subscription you already pay for, or your own API key. No sign-up, no
+in-extension payments, and no server of ours in between.</p>
+
+<h2>AI Context-Aware Subtitle Translator</h2>
+<p>Generates AI subtitles for streaming video by re-translating the stream's own
+caption track, using full-scene context — character voice, relationships,
+glossary terms — for more natural and consistent results than a line-by-line
+machine translation.</p>
 <ul>
   <li><a href="https://chromewebstore.google.com/detail/fnkemableocebmaigomoopnggkhglnjh">Install from the Chrome Web Store</a></li>
-  <li><a href="privacy.html">Privacy Policy — Subtitle Translator</a></li>
-  <li><a href="privacy-document.html">Privacy Policy — Document Translator</a></li>
+  <li><a href="privacy.html">Privacy Policy</a></li>
+</ul>
+
+<h2>Context-Aware Document Translator</h2>
+<p>Translates whole pages and selected text. Long works invent their own
+vocabulary, so you can pin how a work writes a coined term once and have every
+later chapter use it — pinned words are held out of the request entirely, so
+they cannot come back changed. Those decisions are kept per work and per
+language and can be exported as a file to share with anyone reading the same
+thing. Serialized pages can be translated a page ahead, and a quick answer or a
+handoff to an AI website is a selection away.</p>
+<ul>
+  <li class="status">Chrome Web Store listing in review — the link will appear here once it is live.</li>
+  <li><a href="privacy-document.html">Privacy Policy</a></li>
+</ul>
+
+<h2>Feedback</h2>
+<ul>
   <li><a href="https://github.com/zephyranthes03/ai-context-aware-subtitle-translator/issues/new/choose">Report a bug, request a site, or share feedback</a></li>
 </ul>
 </body>
