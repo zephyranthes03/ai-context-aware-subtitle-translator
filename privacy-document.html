@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — Context-Aware Document Translator</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #202124; }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; }
+  h3 { font-size: 1rem; margin-top: 1.4rem; }
+  code { background: #f1f3f4; padding: 0.1rem 0.35rem; border-radius: 3px; }
+  a { color: #1a73e8; }
+  .updated { color: #5f6368; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<h1>Privacy Policy — Context-Aware Document Translator</h1>
+<p class="updated">Last updated: 2026-09-03</p>
+
+<p>This extension does not operate a server, and the developer does not collect,
+receive, or store any of your data. There is no account, no sign-in, and no
+analytics or telemetry of any kind in the extension.</p>
+
+<p>Everything it does happens either locally in your browser, or as a direct
+connection from your browser to a service <strong>you chose and
+configured</strong>.</p>
+
+<h2>What leaves your browser, and to where</h2>
+
+<h3>1. The AI connection you configured</h3>
+<p>To translate, the extension sends the text of the page or the text you
+selected to the model connection you set up in Settings. That connection is one
+of:</p>
+<ul>
+  <li><strong>a model running on your own machine</strong> (for example a local
+      server on <code>127.0.0.1</code>) — in this case the text never leaves
+      your computer;</li>
+  <li><strong>an API endpoint you supply a key for</strong>; or</li>
+  <li><strong>a subscription CLI bridge running on your own machine</strong>,
+      which relays to the AI subscription you already pay for.</li>
+</ul>
+<p>The extension has no endpoint of its own and no fallback destination. If you
+have not configured a connection, no translation request is made at all.</p>
+<p>Along with the text, a request may carry translation context you created: the
+renderings you pinned for the work you are reading, and the target language.</p>
+
+<h3>2. The website you are already reading</h3>
+<p>Two features fetch a page from the site you are on, using your own browser
+session, exactly as opening the page yourself would:</p>
+<ul>
+  <li><strong>Next-page pre-translation</strong>, when you enable it, fetches the
+      following page so it is ready when you get there.</li>
+  <li><strong>Fetch work details</strong>, which reads the work's own page for
+      its title and description. This happens only when you pin your first
+      rendering for a work, or when you press the button for it — never on
+      opening a chapter, and once per work.</li>
+</ul>
+<p>These requests go to that site and nowhere else.</p>
+
+<h3>3. An AI website, only when you send something to it</h3>
+<p>“Ask on AI site” opens a new tab at the AI website you configured and fills in
+the question. Nothing is submitted until you send it there yourself, and you can
+edit or delete anything in it first.</p>
+
+<h3>4. A problem report, only when you submit one</h3>
+<p>The “Report a problem” link opens a pre-filled form. It carries the extension
+version, your target language, the kind of connection you use and its model name,
+and your interface language. <strong>The address of the page you are on is
+included only if you tick the box for it</strong>, which is off by default.</p>
+<p>Nothing is transmitted by opening the form. Every line is visible and
+editable, and you can delete any of it before pressing Submit. The form is a
+Google Form; Google’s privacy policy applies to what you submit there.</p>
+
+<h2>What is stored, and where</h2>
+<p>All of it is stored locally in your browser, using Chrome’s extension
+storage:</p>
+<ul>
+  <li>your settings (connections, target language, display preferences);</li>
+  <li>the renderings you pinned, per work and per target language;</li>
+  <li>recently translated pages, so going back does not re-translate — this is
+      session storage and is discarded when the browser closes.</li>
+</ul>
+<p>None of it is transmitted anywhere. You can delete all of it by removing the
+extension, and individual works from the Series knowledge page.</p>
+
+<h2>Site access</h2>
+<p>The extension requests access to a site only when you enable it there, or for
+the tab you are on when you ask it to translate. It does not read pages in the
+background and does not run on sites you have not activated it on.</p>
+
+<h2>Sensitive information</h2>
+<p>Because you choose the connection, you decide where your text goes. If you
+point the extension at a model running on your own machine, the text being
+translated does not leave that machine. If you point it at a third-party API or
+subscription, that provider’s terms and privacy policy apply to what is sent.</p>
+
+<h2>Contact</h2>
+<p>Problems and questions: the “Report a problem” link in the extension, or the
+<a href="https://github.com/zephyranthes03/ai-context-aware-subtitle-translator/issues">issue
+tracker</a>.</p>
+
+<p><a href="./">← Back</a> · <a href="privacy.html">Privacy policy for the subtitle extension</a></p>
+</body>
+</html>
