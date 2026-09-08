@@ -16,90 +16,45 @@
 </head>
 <body>
 <h1>Privacy Policy — Context-Aware Document Translator</h1>
-<p class="updated">Last updated: 2026-09-03</p>
-
-<p>This extension does not operate a server, and the developer does not collect,
-receive, or store any of your data. There is no account, no sign-in, and no
-analytics or telemetry of any kind in the extension.</p>
-
-<p>Everything it does happens either locally in your browser, or as a direct
-connection from your browser to a service <strong>you chose and
-configured</strong>.</p>
-
+<p class="updated"><em>Last updated: 2026-09-08</em></p>
+<p>The developer does not operate a translation server. Translation and reading data are not automatically sent to the developer. The extension has no developer account or sign-in and no analytics or telemetry. If you choose to submit a problem report, the developer receives that report as described below.</p>
+<p>Everything it does happens either locally in your browser, or as a direct connection from your browser to a service <strong>you chose and configured</strong>.</p>
 <h2>What leaves your browser, and to where</h2>
-
 <h3>1. The AI connection you configured</h3>
-<p>To translate, the extension sends the text of the page or the text you
-selected to the model connection you set up in Settings. That connection is one
-of:</p>
+<p>To translate, the extension sends the text of the page or the text you selected to the model connection you set up in Settings. That connection is one of:</p>
 <ul>
-  <li><strong>a model running on your own machine</strong> (for example a local
-      server on <code>127.0.0.1</code>) — in this case the text never leaves
-      your computer;</li>
-  <li><strong>an API endpoint you supply a key for</strong>; or</li>
-  <li><strong>a subscription CLI bridge running on your own machine</strong>,
-      which relays to the AI subscription you already pay for.</li>
+<li><strong>a model running on your own machine</strong> (for example a local server on <code>127.0.0.1</code>) — in this case the text never leaves your computer;</li>
+<li><strong>an API endpoint you supply a key for</strong>; or</li>
+<li><strong>an optional CLI bridge running on your own machine</strong>, which invokes a supported AI CLI and sends the request to that provider. Eligibility and billing depend on the CLI account and authentication settings. Current routes are Codex, Claude Code and Gemini CLI; Gemini CLI requires eligible Code Assist Standard/Enterprise access for its subscription route. Personal Google AI Pro/Ultra access through Gemini CLI has ended. Antigravity CLI and Grok Build are not integrated into this version.</li>
 </ul>
-<p>The extension has no endpoint of its own and no fallback destination. If you
-have not configured a connection, no translation request is made at all.</p>
-<p>Along with the text, a request may carry translation context you created: the
-renderings you pinned for the work you are reading, and the target language.</p>
-
+<p>The extension has no endpoint of its own and no fallback destination. If you have not configured a connection, no translation request is made at all.</p>
+<p>Along with the text, a request may carry the page title and URL, target language, your question, and relevant context from the work&#x27;s Series DB, including names, renderings and work details. API credentials authenticate requests only to their configured endpoint; a local bridge pairing token authenticates the helper.</p>
 <h3>2. The website you are already reading</h3>
-<p>Two features fetch a page from the site you are on, using your own browser
-session, exactly as opening the page yourself would:</p>
+<p>Two features fetch a page from the site you are on, using your own browser session, exactly as opening the page yourself would:</p>
 <ul>
-  <li><strong>Next-page pre-translation</strong>, when you enable it, fetches the
-      following page so it is ready when you get there.</li>
-  <li><strong>Fetch work details</strong>, which reads the work's own page for
-      its title and description. This happens only when you pin your first
-      rendering for a work, or when you press the button for it — never on
-      opening a chapter, and once per work.</li>
+<li><strong>Next-page pre-translation</strong>, when you enable it, fetches the following page so it is ready when you get there.</li>
+<li><strong>Fetch work details</strong>, which reads the work&#x27;s own page for its title and description. This happens only when you pin your first rendering for a work, or when you press the button for it — never on opening a chapter, and once per work.</li>
 </ul>
 <p>These requests go to that site and nowhere else.</p>
-
-<h3>3. An AI website, only when you send something to it</h3>
-<p>“Ask on AI site” opens a new tab at the AI website you configured and fills in
-the question. Nothing is submitted until you send it there yourself, and you can
-edit or delete anything in it first.</p>
-
+<h3>3. An AI website, when you choose the handoff action</h3>
+<p>&quot;Ask on AI site&quot; opens or reuses the configured AI website and inserts your question and selected text, with any page context included by the configured prompt. This exposes that content to the website. The connection&#x27;s submission setting determines whether the extension also submits it automatically or only prepares the input. Built-in ChatGPT and Claude connections default to automatic submission; a custom automatic form requires its configured submit selector. Choose prepare-only in Settings if you want to review the input before submitting.</p>
 <h3>4. A problem report, only when you submit one</h3>
-<p>The “Report a problem” link opens a pre-filled form. It carries the extension
-version, your target language, the kind of connection you use and its model name,
-and your interface language. <strong>The address of the page you are on is
-included only if you tick the box for it</strong>, which is off by default.</p>
-<p>Nothing is transmitted by opening the form. Every line is visible and
-editable, and you can delete any of it before pressing Submit. The form is a
-Google Form; Google’s privacy policy applies to what you submit there.</p>
-
+<p>The &quot;Report a problem&quot; link opens a pre-filled form. It carries the extension version, your target language, the kind of connection you use and its model name, and your interface language. <strong>The current page address and title are included only if you tick the box for them</strong>, which is off by default.</p>
+<p>Opening the Google Form sends the pre-filled fields to Google in the URL query. The form lets you edit those fields before submitting the report, but editing them does not undo the URL data already sent to Google. The developer receives the completed report when you press Submit. Google&#x27;s privacy policy applies to the form. You can open a report without including the source page information.</p>
 <h2>What is stored, and where</h2>
-<p>All of it is stored locally in your browser, using Chrome’s extension
-storage:</p>
+<p>All of it is stored locally in your browser, using Chrome&#x27;s extension storage:</p>
 <ul>
-  <li>your settings (connections, target language, display preferences);</li>
-  <li>the renderings you pinned, per work and per target language;</li>
-  <li>recently translated pages, so going back does not re-translate — this is
-      session storage and is discarded when the browser closes.</li>
+<li>your settings (connections, API keys/pairing tokens, target language, display preferences);</li>
+<li>the renderings you pinned, per work and per target language;</li>
+<li>recent prefetched page results in browser session storage: up to five pages, also subject to size limits and eviction. Available matching results can be reused; this is not permanent storage of every page you read.</li>
 </ul>
-<p>None of it is transmitted anywhere. You can delete all of it by removing the
-extension, and individual works from the Series knowledge page.</p>
-
+<p>These records are stored locally. Relevant content and credentials are used only in the disclosed requests above. Removing the extension clears its browser storage; saved/exported files and separate CLI accounts remain under your control. You can also manage individual works from the Series knowledge page.</p>
 <h2>Site access</h2>
-<p>The extension requests access to a site only when you enable it there, or for
-the tab you are on when you ask it to translate. It does not read pages in the
-background and does not run on sites you have not activated it on.</p>
-
+<p>You can use the extension on the active tab, enable it for selected sites, or explicitly grant all HTTP/HTTPS sites for the selection-tools setting. Chrome asks for the corresponding permission. Enabled-site content tools can load automatically. Next-page pre-translation can fetch an approved next page in the background when you enable that feature. Configured API and AI-website hosts also require the relevant access; localhost access is declared at installation.</p>
 <h2>Sensitive information</h2>
-<p>Because you choose the connection, you decide where your text goes. If you
-point the extension at a model running on your own machine, the text being
-translated does not leave that machine. If you point it at a third-party API or
-subscription, that provider’s terms and privacy policy apply to what is sent.</p>
-
+<p>Because you choose the connection, you decide where your text goes. If you point the extension at a model running on your own machine, the text being translated does not leave that machine. If you point it at a third-party API or subscription, that provider&#x27;s terms and privacy policy apply to what is sent.</p>
 <h2>Contact</h2>
-<p>Problems and questions: the “Report a problem” link in the extension, or the
-<a href="https://github.com/zephyranthes03/ai-context-aware-subtitle-translator/issues">issue
-tracker</a>.</p>
-
+<p>Problems and questions: the &quot;Report a problem&quot; link in the extension, or the issue tracker at <a href="https://github.com/zephyranthes03/ai-context-aware-subtitle-translator/issues">https://github.com/zephyranthes03/ai-context-aware-subtitle-translator/issues</a>.</p>
 <p><a href="./">← Back</a> · <a href="privacy.html">Privacy policy for the subtitle extension</a></p>
 </body>
 </html>

@@ -15,92 +15,53 @@
 </head>
 <body>
 <h1>Privacy Policy — AI Context-Aware Subtitle Translator</h1>
-<p class="updated">Last updated: 2026-08-16</p>
-
-<p>This extension does not operate a server, and the developer does not
-collect, receive, or store any of your data. Everything the extension does
-happens either locally in your browser or as a direct connection from your
-browser to a third-party AI or translation service <strong>you choose and
-configure</strong>.</p>
-
+<p class="updated"><em>Last updated: 2026-09-08</em></p>
+<p>The developer does not operate a translation server. Translation and viewing data are not automatically sent to the developer. Processing happens locally or through an AI/translation service <strong>you choose and configure</strong>, directly or through the optional local helper. If you choose to submit a problem report, the developer receives that report as described below.</p>
 <h2>What gets sent, and to whom</h2>
-
 <h3>1. The AI translation service you configure</h3>
 <p>To generate a translation, the extension sends:</p>
 <ul>
-  <li>the video's title and episode information,</li>
-  <li>the official subtitle text currently loaded by the video player, and</li>
-  <li>translation context built from that subtitle text (character names,
-    relationships, honorific/address forms, and glossary terms)</li>
+<li>the video&#x27;s title and episode information,</li>
+<li>the official subtitle text currently loaded by the video player, and</li>
+<li>translation context built from that subtitle text (character names, relationships, honorific/address forms, and glossary terms)</li>
 </ul>
-<p>directly from your browser to whichever AI service you have configured in
-Settings:</p>
+<p>directly from your browser to whichever AI service you have configured in Settings:</p>
 <ul>
-  <li>an API key you provide (OpenAI, Anthropic, Google, or any
-    OpenAI-compatible server you specify),</li>
-  <li>a Codex/Claude/Gemini subscription, connected through a small local
-    helper program that runs on your own computer, or</li>
-  <li>a local model you run yourself (e.g. LM Studio, Ollama) on your own
-    machine or network.</li>
+<li>an API key you provide (OpenAI, Anthropic, Google, or any OpenAI-compatible server you specify),</li>
+<li>a supported CLI account through an optional local helper on your computer. Current routes are Codex, Claude Code and Gemini CLI. Eligibility and billing depend on the account and CLI authentication settings. Gemini CLI subscription access is limited to eligible Code Assist Standard/Enterprise accounts after consumer access ended; Antigravity CLI and Grok Build are not integrated, or</li>
+<li>a local model you run yourself (e.g. LM Studio, Ollama) on your own machine or network.</li>
 </ul>
-<p>In every case, this data goes straight from your browser (or your local
-helper program) to that service's own servers under that service's own
-privacy policy and terms. It never passes through, or is retained by, any
-server operated by this extension's developer — because there isn't one.</p>
-
+<p>In every case, this data goes straight from your browser (or your local helper program) to that service&#x27;s own servers under that service&#x27;s own privacy policy and terms. It never passes through, or is retained by, any server operated by this extension&#x27;s developer — because there isn&#x27;t one.</p>
 <h3>2. DeepL (optional machine-translation fill layer)</h3>
-<p>If you add a DeepL API key in Settings, the extension may also send
-subtitle text directly to DeepL's API — either as your chosen translation
-engine, or as a fast fill-in layer that covers upcoming lines while the AI
-backend catches up. This goes straight from your browser to DeepL under
-DeepL's own privacy policy and terms. DeepL is only contacted if you
-configure a key; otherwise this never happens.</p>
-
+<p>If you add a DeepL API key in Settings, the extension may also send subtitle text directly to DeepL&#x27;s API — either as your chosen translation engine, or as a fast fill-in layer that covers upcoming lines while the AI backend catches up. This goes straight from your browser to DeepL under DeepL&#x27;s own privacy policy and terms. DeepL is only contacted if you configure a key; otherwise this never happens.</p>
 <h3>3. Audio subtitles / speech-to-text (optional, per tab)</h3>
-<p>If a video has no usable subtitle track, you can start "audio subtitles"
-for that tab. Only after you explicitly start it, short chunks of that tab's
-audio are captured and sent to the speech-to-text endpoint you've configured
-in Settings — by default OpenAI's hosted Whisper API, or any
-OpenAI-compatible endpoint you specify, including a self-hosted server. This
-never runs automatically or in the background, and only the tab you started
-it on is captured.</p>
-
+<p>If a video has no usable subtitle track, you can start &quot;audio subtitles&quot; for that tab. Only after you explicitly start it, short chunks of that tab&#x27;s audio are captured and sent to the speech-to-text endpoint you&#x27;ve configured in Settings — by default OpenAI&#x27;s hosted Whisper API, or any OpenAI-compatible endpoint you specify, including a self-hosted server. This does not start without your action, and only the tab you selected is captured.</p>
 <h3>4. Public reference lookups for optional show context</h3>
-<p>When the extension recognizes a title, it may look up the <strong>title
-only</strong> (never your subtitle or dialogue text) on public reference
-sources — Wikidata, Wikipedia, and TVMaze — to enrich translation context
-with publicly available cast/character information. These are read-only,
-public lookups; no subtitle content is ever sent to them.</p>
-
-<h2>What never leaves your browser</h2>
+<p>When the extension recognizes a title, it may look up the <strong>title only</strong> (never your subtitle or dialogue text) on public reference sources — Wikidata, Wikipedia, and TVMaze — to enrich translation context with publicly available cast/character information. These are read-only, public lookups; no subtitle content is ever sent to them.</p>
+<h3>5. Optional problem reports</h3>
+<p>The popup&#x27;s feedback link opens a Google Form with the extension version, translation language, connection/engine type and interface language pre-filled. The current page URL and title are included only if you select the source-page checkbox, which is off by default. Opening the form sends these fields to Google in its URL query. You can edit the form before submitting, but this does not undo the URL data already sent to Google. The developer receives the report when you press Submit; Google&#x27;s privacy policy applies to the form.</p>
+<h2>What is stored locally</h2>
 <ul>
-  <li>Your settings (chosen AI service, target language, display preferences).</li>
-  <li>Generated and cached subtitle translations.</li>
-  <li>The reusable per-title translation context ("Series DB": character
-    voice, relationships, glossary) built from your own viewing.</li>
-  <li>Any subtitle file you manually import from your own computer.</li>
+<li>Your settings (chosen AI service, target language, display preferences, API keys and local-helper pairing token).</li>
+<li>Generated and cached subtitle translations.</li>
+<li>The reusable per-title translation context (&quot;Series DB&quot;: character voice, relationships, glossary) built from your own viewing.</li>
+<li>Any subtitle file you manually import from your own computer.</li>
 </ul>
-<p>All of the above are stored locally in your browser's extension storage.
-The developer has no access to them, and they are never transmitted anywhere
-except as described in "What gets sent, and to whom" above.</p>
-
-<h2>What we don't do</h2>
+<p>These records are stored locally in your browser&#x27;s extension storage. Relevant context and content can be included in the requests described above. API credentials authenticate only their configured endpoint; the pairing token authenticates the local helper. The developer has no automatic access to this storage.</p>
+<h2>What we don&#x27;t do</h2>
 <ul>
-  <li>We don't run a backend server.</li>
-  <li>We don't collect analytics, usage tracking, or advertising identifiers.</li>
-  <li>We don't sell or share your data with anyone, because we never receive it.</li>
+<li>We don&#x27;t run a backend server.</li>
+<li>We don&#x27;t collect analytics, usage tracking, or advertising identifiers.</li>
+<li>We don&#x27;t sell your data. Translation data goes only to the disclosed services; a voluntary problem report is used to investigate the issue you submit.</li>
 </ul>
-
 <h2>Your controls</h2>
 <ul>
-  <li>You choose which AI service to use, and can switch or remove it at any
-    time in Settings.</li>
-  <li>You can delete all cached/generated subtitles from Settings at any time.</li>
-  <li>Uninstalling the extension removes all locally stored data.</li>
+<li>You choose which AI service to use, and can switch or remove it at any time in Settings.</li>
+<li>You can delete all cached/generated subtitles from Settings at any time.</li>
+<li>Uninstalling the extension removes its browser storage. Exported files and separate CLI accounts remain under your control.</li>
 </ul>
-
+<p>Supported sites have the access listed in the manifest. Other sites can be activated individually; the optional automatic-detection setting can request all HTTP/HTTPS sites with your approval through Chrome. Endpoint access follows the configured service. The optional audio feature is started separately per tab.</p>
 <h2>Contact</h2>
-<p>Questions about this policy: open an issue at
-<a href="https://github.com/zephyranthes03/ai-context-aware-subtitle-translator/issues">github.com/zephyranthes03/ai-context-aware-subtitle-translator/issues</a>.</p>
+<p>Questions about this policy: open an issue at <a href="https://github.com/zephyranthes03/ai-context-aware-subtitle-translator/issues">github.com/zephyranthes03/ai-context-aware-subtitle-translator/issues</a>.</p>
 </body>
 </html>
