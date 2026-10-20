@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Privacy — AI Context-Aware Image Translator</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f7fc;color:#20283b;font:17px/1.7 system-ui,-apple-system,sans-serif}
+main{max-width:880px;margin:48px auto;padding:44px 48px;background:#fff;border:1px solid #e0e5f0;border-radius:16px}
+h1{font-size:30px;line-height:1.3;margin:0 0 24px;letter-spacing:-.02em}h2{font-size:21px;line-height:1.4;margin:36px 0 12px}
+p{margin:0 0 18px}li{margin-bottom:12px}ul{padding-left:26px}a{color:#1754b8;overflow-wrap:anywhere}strong{font-weight:650}
+@media(max-width:600px){main{margin:0;padding:28px 22px;border:0;border-radius:0}h1{font-size:26px}body{font-size:16px}}
+</style>
+</head>
+<body><main>
+<h1>Privacy Policy — AI Context-Aware Image Translator</h1>
+<p>Last updated: 2026-10-19</p>
+<p>AI Context-Aware Image Translator reads and translates text in images you choose to process. The developer does not operate a translation server. The extension has no developer account, analytics, advertising trackers or automatic telemetry. Reading content is not automatically sent to the developer.</p>
+<h2>AI connections you configure</h2>
+<p>Configure a connection before translation. The extension supports local model servers and supported remote API endpoints. It does not include a hosted AI service or use the subscription helper available with the sibling text products.</p>
+<ul><li><strong>Image recognition:</strong> source images, rendered PDF pages, image tiles or selected crops go to your configured recognition endpoint. Recognition or layout recovery can send additional crops from the same source. Images can contain sensitive information; choose the content and endpoint accordingly.</li><li><strong>Translation and context:</strong> recognized source text, target language, relevant work information, names, terms, saved expressions and limited preceding original/translation pairs go to your configured translation endpoint. Recognition and translation can use different connections.</li><li><strong>Quick explanations:</strong> the selected translation and, when available, its recognized original go to your configured quick-answer connection to request an explanation.</li><li><strong>Connection setup:</strong> listing models, testing a connection or testing image support contacts the endpoint you selected. API credentials and configured authentication headers authenticate those requests.</li></ul>
+<p>AI responses are data, not downloaded executable code. If the selected model runs entirely on your computer without forwarding requests, AI payloads can stay on your computer. A localhost address alone does not establish how another program handles data. Remote providers receive the requested content under their own privacy policies and terms. Model billing is separate from the extension.</p>
+<h2>Source websites and selected-area capture</h2>
+<p>The extension reads image/page addresses and relevant page information to locate content you activate, associate translations with their source and prepare supported chapters. It may fetch images from their original URLs for recognition. Current- or next-chapter preparation can open source pages in background tabs using your browser session. Those websites receive normal browser requests independently of AI processing.</p>
+<p>For selected-area translation, the extension may capture the visible tab after you activate the feature when direct image access is unavailable. The temporary capture is cropped before recognition; the selected crop is used for that reading. A blocked or blank capture is rejected. The extension does not obtain encryption keys or decrypt protected book files.</p>
+<p>The extension does not use Chrome&#x27;s browsing-history API or create an analytics profile of your browsing. Source URLs and selected work/chapter context are nevertheless processed and may be stored as described below.</p>
+<h2>Local storage and retention</h2>
+<p>Local browser extension storage holds:</p>
+<ul><li>connection settings, API credentials and headers, model choices, target language and display preferences;</li><li>per-work Series DB information, terms, expressions and local overrides;</li><li>bounded recognition and translation caches, source identifiers and processing/recovery records;</li><li>manually saved source corrections, translations and typography, with source-identity information to avoid applying an edit to the wrong content.</li></ul>
+<p>The prepared chapter translation cache also uses browser session storage and is limited to two chapters and 8 MiB. Session navigation and progress records, including chapter addresses, are stored separately and can retain information about more than two chapters during the browser session; that cache limit does not cover these separate records. Cached/prepared content can be evicted or need processing again. These caches are not a permanent archive of everything you read.</p>
+<p>Normal recognition/translation caches and saved manual edits do not store the full source image. Active page/viewer/capture sessions can retain image pixels in memory while needed. Clearing ordinary caches preserves separately saved edits. Settings provides separate saved-edit export, import and deletion controls. Saved edits are size-limited; exceeding the limit is reported rather than silently deleting previous human edits.</p>
+<p>Manage settings, caches and work data using the extension&#x27;s controls. Removing the extension clears its browser storage. Original local files, exported files, provider accounts and data retained by a remote provider are separate and are not deleted by uninstalling the extension.</p>
+<h2>Exported files and support</h2>
+<p>Exporting reference data or saved edits creates a file under your control. An explicitly invoked diagnostic reading replay can also include the source page image, recognized text, translations and reading state. Other diagnostic exports may contain only state. Diagnostic files are not automatically uploaded; review them before sharing.</p>
+<p>If you contact support or post an issue, the developer and hosting service receive the information you submit. Public issues are visible to others. Do not include API credentials or private reading content in a public report.</p>
+<h2>Permissions and choices</h2>
+<p>Active-tab access and scripting support user-activated image reading and overlays. Storage saves the local data above. Context menus open selected pages, links or images in the extension&#x27;s viewer. An offscreen document can run packaged local image-processing workers to prepare source crops for recognition.</p>
+<p>Localhost permissions allow connections to model servers on your computer. Optional HTTP/HTTPS host access is requested for relevant sites and configured API endpoints. Chrome presents the corresponding permission request. Review or revoke site access in Chrome; unavailable access may prevent translation or chapter preparation.</p>
+<h2>Limited use</h2>
+<p>User data is used and transferred only to provide the image-reading and translation features you request, and support you explicitly choose to contact. The developer does not sell user data, use it for advertising, or use or transfer it for creditworthiness or lending decisions. The extension&#x27;s use of user data complies with the Chrome Web Store User Data Policy, including its Limited Use requirements.</p>
+<h2>Contact</h2>
+<p>Questions about the extension or its privacy practices: <a href="https://github.com/zephyranthes03/ai-context-aware-subtitle-translator/issues">https://github.com/zephyranthes03/ai-context-aware-subtitle-translator/issues</a>.</p>
+</main></body></html>
